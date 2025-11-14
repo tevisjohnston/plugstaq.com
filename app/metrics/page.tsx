@@ -1,8 +1,6 @@
-import { createClient } from '@/lib/supabase/server'
+import { redirect } from 'next/navigation'
 
 export default async function Page() {
-  const supabase = await createClient()
-  const { data: metrics } = await supabase.from('metrics').select()
-
-  return <pre>{JSON.stringify(metrics, null, 2)}</pre>
+  // redirect to dashboard page
+  redirect('/dashboard')
 }
