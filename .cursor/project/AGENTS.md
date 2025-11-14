@@ -24,8 +24,9 @@
 
 ## Task
 
-- Build a beautiful responsive dashboard for `plugstaq.com` that displays 9 key business metrics by connecting the data for each metric from Wordpress website `7figure.affiliatemarketconnect.com` to `plugstaq.com`
-- Use MCP server to connect to Supabase database and create table for 9 metrics to store data for each metric
+**Dashboard** Build a beautiful responsive dashboard for `plugstaq.com` that displays 9 key business metrics by connecting the data for each metric from Wordpress website `7figure.affiliatemarketconnect.com` to `plugstaq.com`
+**Database** Use MCP server to connect to Supabase database. Edit table metrics to add 9 metrics to store the data to display the data for each metric.
+**Metrics**
 1. 🖱 Clicks
 2. 📥 Leads
 3. 💸 Sales
