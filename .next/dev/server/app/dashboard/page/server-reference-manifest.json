@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00ec0e8ebd35aa909e6927a0d95217c809a8db290e": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "[project]/plugstaq.com/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/plugstaq.com/app/dashboard/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "refreshMetrics",
+          "filename": "plugstaq.com/app/dashboard/actions.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      },
+      "exportedName": "refreshMetrics",
+      "filename": "plugstaq.com/app/dashboard/actions.ts"
+    }
+  },
+  "edge": {}
+}

@@ -1,3 +1,41 @@
-[00:00:05.299] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:06.230] Server  LOG      ✓ Ready in 4.6s
-[00:00:10.790] Server  LOG      ○ Compiling /metrics ...
+[00:00:06.185] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:06.766] Server  LOG      ✓ Ready in 5.6s
+[00:00:30.670] Server  LOG      ○ Compiling / ...
+[00:00:56.549] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="/plugstaq....">
+                    <SegmentTrieNode>
+                    <DashboardPage>
+                      <div className="flex-1 w-f...">
+                        <div>
+                        <DashboardControls>
+                          <div className="flex items...">
+                            <_c>
+                            <div className="text-sm te...">
+                              <span>
+                              <span className="ml-2">
++                               1:45:20 PM
+-                               1:45:19 PM
+                        ...
+                  ...
+                ...
+      ...
+

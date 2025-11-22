@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/tevisjohnston/plugstaq.com/app/dashboard/actions.ts"],"sourcesContent":["'use server'\n\nimport { createClient } from '@/lib/supabase/server'\nimport { revalidatePath } from 'next/cache'\n\nexport async function refreshMetrics() {\n  const supabase = await createClient()\n  \n  // fetch latest metrics from database\n  const { data: metrics, error } = await supabase\n    .from('metrics')\n    .select('*')\n    .order('id', { ascending: true })\n  \n  if (error) {\n    return { error: error.message, data: null }\n  }\n  \n  // revalidate the dashboard page to ensure fresh data\n  revalidatePath('/dashboard')\n  \n  return { error: null, data: metrics }\n}\n\n"],"names":[],"mappings":";;;;;AAEA;AACA;;;;;AAEO,eAAe;IACpB,MAAM,WAAW,MAAM,IAAA,4JAAY;IAEnC,qCAAqC;IACrC,MAAM,EAAE,MAAM,OAAO,EAAE,KAAK,EAAE,GAAG,MAAM,SACpC,IAAI,CAAC,WACL,MAAM,CAAC,KACP,KAAK,CAAC,MAAM;QAAE,WAAW;IAAK;IAEjC,IAAI,OAAO;QACT,OAAO;YAAE,OAAO,MAAM,OAAO;YAAE,MAAM;QAAK;IAC5C;IAEA,qDAAqD;IACrD,IAAA,kKAAc,EAAC;IAEf,OAAO;QAAE,OAAO;QAAM,MAAM;IAAQ;AACtC;;;IAjBsB;;AAAA,kQAAA"}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///Users/tevisjohnston/plugstaq.com/.next-internal/server/app/dashboard/page/actions.js%20%28server%20actions%20loader%29"],"sourcesContent":["export {refreshMetrics as '00ec0e8ebd35aa909e6927a0d95217c809a8db290e'} from 'ACTIONS_MODULE0'\n"],"names":[],"mappings":";AAAA"}}]
+}
